@@ -1,9 +1,9 @@
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from monitor import monitor
-from pipeline import pipeline
-from alerts import alert_system
+from .monitor import monitor
+from .pipeline import pipeline
+from .alerts import alert_system
 import datetime
 import json
 
