@@ -67,7 +67,7 @@ Write-Host "══════════════════════�
 Write-Host ""
 Write-Host "📌 To start monitoring YOUR computer:" -ForegroundColor Yellow
 Write-Host "   cd $installDir\devops-tool" -ForegroundColor White
-Write-Host "   start.bat" -ForegroundColor White
+Write-Host "   .\start.bat" -ForegroundColor White
 Write-Host ""
 Write-Host "📌 Then open your browser to:" -ForegroundColor Yellow
 Write-Host "   http://localhost:8001" -ForegroundColor White
