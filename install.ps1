@@ -69,8 +69,15 @@ Write-Host "📌 To start monitoring YOUR computer:" -ForegroundColor Yellow
 Write-Host "   cd $installDir\devops-tool" -ForegroundColor White
 Write-Host "   .\start.bat" -ForegroundColor White
 Write-Host ""
+Write-Host "📌 Terminal 2 - Frontend Dashboard (Open NEW terminal):" -ForegroundColor Yellow
+Write-Host "   cd C:\Users\YOUR_USERNAME\franktechspace-devops\devops-tool\frontend" -ForegroundColor Yellow
+Write-Host "   python -m http.server 5500" -ForegroundColor White
+Write-Host ""
 Write-Host "📌 Then open your browser to:" -ForegroundColor Yellow
 Write-Host "   http://localhost:8001" -ForegroundColor White
+Write-Host ""
+Write-Host "📌 Then open your browser to:" -ForegroundColor Yellow
+Write-Host "   http://localhost:5500" -ForegroundColor White
 Write-Host ""
 Write-Host "═══════════════════════════════════════════════════════════" -ForegroundColor Cyan
 Write-Host "💡 Need help? Contact: franktechspace@outlook.com" -ForegroundColor Yellow
