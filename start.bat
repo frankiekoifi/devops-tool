@@ -1,46 +1,34 @@
 @echo off
-title FrankTechSpace DevOps Tool
+title DevOps Tool Launcher
 color 0A
 
-echo ==============================================
+echo ============================================
 echo    🔧 FRANKTECHSPACE DEVOPS TOOL 🔧
-echo ==============================================
-echo.
-echo Starting DevOps Monitoring System...
+echo ============================================
 echo.
 
-:: Get the current directory
-set "ROOT_DIR=%~dp0"
-set "ROOT_DIR=%ROOT_DIR:~0,-1%"
+echo [1/3] Starting Backend Server...
+start "DevOps Backend" cmd /k "cd /d %~dp0 && venv\Scripts\activate && python backend\app.py"
 
-:: Start Backend Server
-echo [1/3] Starting Backend API Server...
-start "DevOps Backend" cmd /k "cd /d "%ROOT_DIR%" && venv\Scripts\activate && python backend\app.py"
+echo [2/3] Waiting for backend to initialize...
+timeout /t 3 /nobreak > nul
 
-:: Wait for backend to initialize (5 seconds)
-echo [2/3] Waiting for backend to start...
-timeout /t 5 /nobreak > nul
-
-:: Start Frontend Server
 echo [3/3] Starting Frontend Dashboard...
-start "DevOps Frontend" cmd /k "cd /d "%ROOT_DIR%\frontend" && python -m http.server 5500"
+start "DevOps Frontend" cmd /k "cd /d %~dp0\frontend && python -m http.server 5500"
 
-:: Wait a moment then open browser
-timeout /t 2 /nobreak > nul
-
-:: Open browser to dashboard
+echo.
 echo Opening dashboard in your browser...
+timeout /t 2 /nobreak > nul
 start http://localhost:5500
 
 echo.
-echo ==============================================
-echo    ✅ ALL SYSTEMS RUNNING!
-echo ==============================================
-echo.
-echo Backend API:  http://localhost:8001
-echo Frontend UI:  http://localhost:5500
+echo ============================================
+echo    ✅ BOTH SERVERS ARE RUNNING!
+echo ============================================
+echo    Backend API:  http://localhost:8001
+echo    Frontend UI:  http://localhost:5500
+echo ============================================
 echo.
 echo Close both terminal windows to stop.
-echo ==============================================
 echo.
 pause

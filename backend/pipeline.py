@@ -2,7 +2,6 @@ import subprocess
 import json
 import datetime
 import os
-import shutil
 import random
 
 class CICDPipeline:
