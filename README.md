@@ -1,6 +1,5 @@
 # 🔧 FrankTechSpace DevOps Automation Tool
 
-```markdown
 > **📖 For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md)**
 
 A powerful, lightweight system monitoring and CI/CD pipeline automation tool.
