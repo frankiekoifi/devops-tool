@@ -15,9 +15,11 @@ A powerful, lightweight system monitoring and CI/CD pipeline automation tool.
 ### One-Line Install (Linux/macOS)
 curl -fsSL https://raw.githubusercontent.com/frankiekoifi/devops-tool/main/install.sh | bash
 
-One-Line Install (Windows PowerShell)
+### One-Line Install (Windows PowerShell)
+
 powershell
 irm https://raw.githubusercontent.com/frankiekoifi/devops-tool/main/install.ps1 | iex
+
 Manual Install
 bash
 # Clone the repository
