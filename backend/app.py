@@ -12,7 +12,7 @@ app = FastAPI(title="DevOps Automation Tool", description="CI/CD Pipeline with M
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:3000", "https://devops-tool.onrender.com","https://devops-tool.netlify.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
