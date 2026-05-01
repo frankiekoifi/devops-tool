@@ -1,65 +1,151 @@
+This is **very close to a top-tier README**, but right now it will still **render badly on GitHub** because of broken Markdown structure.
+
+I’ll fix it properly so you can paste it once and be done.
+
+---
+
+# ❌ What’s broken in your current version
+
+* Code blocks are **not closed properly**
+* Sections like:
+
+  ````
+  ```powershell
+  ...
+  One-Line Install (Linux/macOS)
+  ````
+
+  ```
+  → This breaks rendering completely
+  ```
+* Tables are written as plain text (won’t format)
+* Some headings are missing `##`
+* Docker + Project structure blocks are not wrapped correctly
+* License block formatting is broken
+
+---
+
+# ✅ CLEAN FINAL README (PRODUCTION-READY)
+
+Copy this exactly:
+
+````markdown
 # 🔧 FrankTechSpace DevOps Automation Tool
 
-A powerful, lightweight system monitoring and CI/CD pipeline automation tool.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115.6-green.svg)](https://fastapi.tiangolo.com/)
+[![Netlify](https://img.shields.io/badge/Netlify-Deployed-brightgreen.svg)](https://devops-tool.netlify.app)
+
+A powerful, lightweight system monitoring and CI/CD pipeline automation tool for developers and system administrators.
 
 ---
 
 ## ✨ Features
 
-- 📊 Real-time system monitoring (CPU, Memory, Disk, Network)
-- 🔄 CI/CD Pipeline automation (Clone → Test → Build → Deploy)
-- 🔔 Smart alerting system with thresholds
-- 📈 Historical data tracking
-- 🐳 Docker ready
+| Feature | Description |
+|---------|-------------|
+| 📊 System Monitoring | Real-time CPU, Memory, Disk, Network |
+| 🔄 CI/CD Pipeline | Clone → Test → Build → Deploy |
+| 🔔 Smart Alerts | Threshold-based notifications |
+| 📈 Historical Data | Track metrics (last 24h) |
+| 🐳 Docker Ready | Containerized deployment |
 
 ---
 
 ## 📥 Installation
 
-### One-Line Install (Linux/macOS)
+### Windows PowerShell
+
+```powershell
+irm https://raw.githubusercontent.com/frankiekoifi/devops-tool/main/install.ps1 | iex
+````
+
+### Linux/macOS
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/frankiekoifi/devops-tool/main/install.sh | bash
-One-Line Install (Windows PowerShell)
-irm https://raw.githubusercontent.com/frankiekoifi/devops-tool/main/install.ps1 | iex
-Manual Install
-git clone https://github.com/frankiekoifi/devops-tool.git
+```
 
+### Manual Install
+
+```bash
+git clone https://github.com/frankiekoifi/devops-tool.git
 cd devops-tool
 
 pip install -r requirements.txt
+python -m backend.app
+```
 
-python backend/app.py
-🚀 Usage
-python backend/app.py
+---
+
+## 🚀 Usage
+
+```bash
+python -m backend.app
+```
 
 Open in browser:
 
+```
 http://localhost:8001
-📊 What You Can Monitor
-Metric	Description
-CPU Usage	Overall + per-core utilization
-Memory Usage	RAM and Swap usage
-Disk Usage	Storage space monitoring
-Network I/O	Data sent/received
-Top Processes	Most CPU-intensive tasks
-🔄 CI/CD Pipeline
-Trigger automated builds
-Simulated test execution
-Deployment tracking
-Pipeline history
-🔔 Alerts
+```
 
-Triggered when:
+---
 
-CPU > 85% (Warning) / 95% (Critical)
-Memory > 85% (Warning) / 95% (Critical)
-Disk > 85% (Warning) / 95% (Critical)
-🐳 Docker Deployment
+## 🌍 Live Demo
+
+* Dashboard: [https://devops-tool.netlify.app](https://devops-tool.netlify.app)
+* API: [https://devops-tool-api.onrender.com](https://devops-tool-api.onrender.com)
+* Docs: [https://devops-tool-api.onrender.com/docs](https://devops-tool-api.onrender.com/docs)
+
+⚠️ Demo uses cloud server metrics (not your local machine)
+
+---
+
+## 📊 Monitoring
+
+| Metric  | Description    | Threshold    |
+| ------- | -------------- | ------------ |
+| CPU     | Per-core usage | 85% / 95%    |
+| Memory  | RAM + Swap     | 85% / 95%    |
+| Disk    | Storage        | 85% / 95%    |
+| Network | I/O            | Monitor only |
+
+---
+
+## 🔄 CI/CD Pipeline
+
+1. Clone repository
+2. Install dependencies
+3. Run tests
+4. Build application
+5. Deploy
+
+(All stages simulated)
+
+---
+
+## 🔔 Alerts
+
+* Real-time dashboard alerts
+* Severity levels (Warning / Critical)
+* Acknowledge + history tracking
+
+---
+
+## 🐳 Docker
+
+```bash
 docker build -t devops-tool .
-
 docker run -p 8001:8001 devops-tool
-📁 Project Structure
+```
+
+---
+
+## 📁 Project Structure
+
+```text
 devops-tool/
 ├── backend/
 │   ├── app.py
@@ -67,20 +153,54 @@ devops-tool/
 │   ├── pipeline.py
 │   └── alerts.py
 ├── frontend/
-│   └── index.html
 ├── install.sh
+├── install.ps1
 ├── install.bat
-└── requirements.txt
-🔗 Live Demo
-Dashboard: https://devops-tool.netlify.app
-API Docs: https://devops-tool-api.onrender.com/docs
-👨‍💻 Author
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🛠️ Requirements
+
+* Python 3.8+
+* pip
+* Browser
+* Docker (optional)
+
+---
+
+## 🐛 Troubleshooting
+
+| Issue                 | Fix                         |
+| --------------------- | --------------------------- |
+| ImportError           | Use `python -m backend.app` |
+| Port in use           | Kill process on 8001        |
+| Dashboard not loading | Ensure backend is running   |
+
+---
+
+## 👨‍💻 Author
 
 FrankTechSpace
 
-Email: franktechspace@outlook.com
-Phone: 0700 468 158
-GitHub: @frankiekoifi
-📄 License
+* Email: franktechspace@outlook.com
+* GitHub: @frankiekoifi
+* Location: Nairobi, Kenya
 
-MIT License – Free for personal and commercial use
+---
+
+## 📄 License
+
+MIT License © 2026 FrankTechSpace
+
+---
+
+## ⭐ Support
+
+* Star the repo
+* Share with developers
+* Open issues or suggestions
+
+Built with Francis Ochieng💚 in Nairobi, Kenya
