@@ -1,33 +1,3 @@
-This is **very close to a top-tier README**, but right now it will still **render badly on GitHub** because of broken Markdown structure.
-
-I’ll fix it properly so you can paste it once and be done.
-
----
-
-# ❌ What’s broken in your current version
-
-* Code blocks are **not closed properly**
-* Sections like:
-
-  ````
-  ```powershell
-  ...
-  One-Line Install (Linux/macOS)
-  ````
-
-  ```
-  → This breaks rendering completely
-  ```
-* Tables are written as plain text (won’t format)
-* Some headings are missing `##`
-* Docker + Project structure blocks are not wrapped correctly
-* License block formatting is broken
-
----
-
-# ✅ CLEAN FINAL README (PRODUCTION-READY)
-
-Copy this exactly:
 
 ````markdown
 # 🔧 FrankTechSpace DevOps Automation Tool
