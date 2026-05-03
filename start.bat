@@ -1,17 +1,9 @@
 @echo off
-echo ============================================
-echo    🔧 FRANKTECHSPACE DEVOPS TOOL 🔧
-echo ============================================
-echo.
+title FrankTechSpace DevOps Tool
+cd /d "%~dp0"
 
-cd /d %~dp0
+call venv\Scripts\activate.bat
 
-echo Activating virtual environment...
-call venv\Scripts\activate
-
-echo Starting backend server...
-echo.
-
-uvicorn backend.app:app --host 0.0.0.0 --port 8001 --reload
+python -m backend.app
 
 pause
